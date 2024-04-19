@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Queue Management System</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Queue Management System</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container preparing">
+<div class="container">
+    <div id="preparing" class="queue-container">
         <h2>Preparing</h2>
-        <div class="grid preparing-grid"></div>
+        <input type="number" id="addNumberInput" placeholder="Enter number" />
         <button onclick="addToPreparing()">Add to Preparing</button>
+        <div class="queue" id="preparingQueue"></div>
     </div>
-    <div class="container serving">
+    <div id="nowServing" class="queue-container">
         <h2>Now Serving</h2>
-        <div class="grid serving-grid"></div>
-        <button onclick="moveToServing()">Move to Serving</button>
+        <div class="queue" id="nowServingQueue"></div>
     </div>
-    <script src="script.js"></script>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

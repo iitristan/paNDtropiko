@@ -1,43 +1,47 @@
 body, html {
-    height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    height: 100%;
 }
 
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 100%;
-    float: left;
+    height: 100vh;
 }
 
-h2 {
-    margin-top: 0;
+.queue-container {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #000;
 }
 
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.queue {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 10px;
-    margin: 20px 0;
-    width: 90%;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 80%;
 }
 
-.grid div {
-    width: 100px;
-    height: 100px;
+.queue div {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    padding: 5px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
 }
 
-.grid div:hover {
-    background-color: black;
-    color: white;
+button {
+    margin-top: 10px;
+}
+
+.delete-btn {
+    padding: 2px 5px;
+    font-size: 0.8rem;
+    color: red;
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }

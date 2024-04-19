@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Queue Management System</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<div class="container">
-    <div id="preparing" class="queue-container">
-        <h2>Preparing</h2>
-        <input type="number" id="addNumberInput" placeholder="Enter number" />
-        <button onclick="addToPreparing()">Add to Preparing</button>
-        <div class="queue" id="preparingQueue"></div>
+    <div class="container-fluid">
+        <div class="row h-100">
+            <div id="preparing"
+                class="col-md-6 queue-container d-flex flex-column align-items-center justify-content-start">
+                <h2>Preparing</h2>
+                <input type="number" id="addNumberInput" class="form-control w-75" placeholder="Enter number" />
+                <button onclick="addToPreparing()" class="btn btn-primary mt-2">Add to Preparing</button>
+                <div class="queue w-100" id="preparingQueue"></div>
+            </div>
+            <div id="nowServing"
+                class="col-md-6 queue-container d-flex flex-column align-items-center justify-content-start">
+                <h2>Now Serving</h2>
+                <div class="queue w-100" id="nowServingQueue"></div>
+            </div>
+        </div>
     </div>
-    <div id="nowServing" class="queue-container">
-        <h2>Now Serving</h2>
-        <div class="queue" id="nowServingQueue"></div>
-    </div>
-</div>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

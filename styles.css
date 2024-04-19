@@ -2,6 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat globally if preferred */
 }
 
 .container-fluid, .h-100 {
@@ -16,7 +17,7 @@ body, html {
 
 .queue {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Ensure there are exactly 3 columns */
     gap: 10px;
     padding: 10px;
     overflow-y: auto;
@@ -24,11 +25,14 @@ body, html {
 
 .queue div {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 20px; /* Increase padding for a bigger box */
     background-color: #f0f0f0;
     border: 1px solid #ccc;
+    font-size: 2.5rem; /* Increase font size for bigger text */
+    font-weight: 700; /* Bold font style */
+    height: 120px; /* Set a fixed height for each box */
 }
 
 .delete-btn {
@@ -38,4 +42,9 @@ body, html {
     border: none;
     background: transparent;
     cursor: pointer;
+    margin-left: 10px; /* Add some space between the number and the delete button */
+}
+
+button, input[type="number"] {
+    font-family: 'Montserrat', sans-serif;
 }
